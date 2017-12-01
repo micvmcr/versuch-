@@ -6,14 +6,15 @@
   [& args]
 
 
-  (def likes-bekommen 300)
+
+  (def likes-bekommen (Integer/parseInt (first args)))
 
   (defn werbung-anzeigen [] (println "bitte kaufe dir einen macbook"))
 
   (if (<  299 likes-bekommen)
-      (werbung-anzeigen) 
+      (werbung-anzeigen)
       (println (str "es fehlen noch "
-                    (- 299 likes-bekommen) 
+                    (- 299 likes-bekommen)
                     " likes"
                )
       )
